@@ -1,5 +1,4 @@
-# Sprint 11
-## Module 01
+# Sprint 11 - Module 01
 **Key Concepts**
 - Creating React Tests
 - Understanding Test Concepts
@@ -30,12 +29,19 @@
 - Integration Testing => Verify a Piece of the Application
 - Unit Testing => Individual Functions or Components
 
-### Notes
-*Mocks helps us simulate the behavior of real objects.*
-*Spies help us verify that the things we expect to be called are actually called.*
-*Naming convention for test files is `Component.test.js`*
+## Notes
+- *Mocks helps us simulate the behavior of real objects.*
+- *Spies help us verify that the things we expect to be called are actually called.*
+- *Naming convention for test files is `Component.test.js`*
 
-### Examples
-` test('renders without errors', () => { `
-`   render(<App />)                      `
-` })                                     `
+## Examples
+- ` test('renders without errors', () => { `
+- `   render(<App />)                      `
+- ` })                                     `
+
+### Objective 1 - Test React Components as the Props Change
+- There is a built-in method called `rerender()` that allows us to look at a component with new props easily.
+- All `getBy` assertions return an error if they can't find the thing they're searching for (if a return is `null`).
+- The assertion called `queryByRole` (or any `queryBy` assertion), will return null instead of an error. 
+- This lets us query for something this isn't supposed to be on the DOM.
+- It also allows us to use an assertion like `.toBeNull()` or `toBeFalsy()`, and then tests will start passing even when no content is rendered.
