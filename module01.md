@@ -45,3 +45,5 @@
 - The assertion called `queryByRole` (or any `queryBy` assertion), will return null instead of an error. 
 - This lets us query for something this isn't supposed to be on the DOM.
 - It also allows us to use an assertion like `.toBeNull()` or `toBeFalsy()`, and then tests will start passing even when no content is rendered.
+
+### Objective 2 - Use Mocks in Web Application Tests
