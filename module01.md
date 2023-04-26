@@ -29,15 +29,30 @@
 - Integration Testing => Verify a Piece of the Application
 - Unit Testing => Individual Functions or Components
 
-## Notes
+## Module Notes
 - *Mocks helps us simulate the behavior of real objects.*
 - *Spies help us verify that the things we expect to be called are actually called.*
 - *Naming convention for test files is `Component.test.js`*
 
-## Examples
-- ` test('renders without errors', () => { `
-- `   render(<App />)                      `
-- ` })                                     `
+## Module Examples
+- *Assert a component has rendered...*
+- ` test('renders without errors', () => {     `
+- `   render(<App />)                          `
+- ` })                                         `
+- *Assert a function has been called...*
+- ` test('function has been called', () => {   `
+- `   expect(someFunction).toHaveBeenCalled(); `
+- ` })                                         `
+- *Use a fake version object for testing...*
+- ` test('used fake data for testing', () => { `
+- `   jest.mock(object, () => () => "abcde");  `
+- ` })                                         `
+- *Rerender a component with new data...*
+- ` test('renders without errors', () => {     `
+- `   render(<App />)                          `
+- `   rerender(<App name={"Name"}/>)           `
+- ` })                                         `
+
 
 ### Objective 1 - Test React Components as the Props Change
 - There is a built-in method called `rerender()` that allows us to look at a component with new props easily.
@@ -70,5 +85,3 @@
 - Use the `waitFor` function from RTL to wait for RTL to update the DOM so we can query for the dog images.
 - Write an assertion in the `waitFor` functions callback function.
 - Finally, we will make sure that the correct function was called by adding an extra assertion, `expect(mockFetchData).toHaveBeenCalledTimes(1);`.
-
-
