@@ -47,3 +47,28 @@
 - It also allows us to use an assertion like `.toBeNull()` or `toBeFalsy()`, and then tests will start passing even when no content is rendered.
 
 ### Objective 2 - Use Mocks in Web Application Tests
+- To isolate the behavior of the function, it's often desirable to replace the other objects with mocks that simulate the behavior of the real objects.
+- Replacing objects is especially useful if the actual objects are impractical to incorporate into the unit test.
+- Another use of mocks is as "spies" because they let us spy on the behavior of a function that is called by some other code.
+- Mock functions can keep track of calls to the function and the parameters passed in those calls.
+- Simpler mocks that implement only enough behavior to execute test code are sometimes called "stubs."
+
+### Objective 3 - Test Asynchronous API Calls That Are Made in a Component
+- An asynchronous test is a special kind of test that does not complete right away, as it needs to wait for the results of one or more asynchronous operations.
+- The `waitFor` function from React testing library lets us tell the test that we need to wait for the async call to finish before continuing our assertions.
+- As usual, we need to import the required libraries for testing.
+- In addition to our normal libraries, we'll import `waitFor` to make our function run asynchronously.
+- We'll import our `fetchData` as `mockFetchData` so that we don't have to wait for the actual call to be made.
+- Remember, a mock allows us to isolate a function from its dependencies.
+- We will create the mock outside of the test block to mock the `fetchData` async function.
+- Inside the `test` block we will tell the mock function with what data it should resolve.
+- Render the component, query for the necessary elements, and fire the onClick event with `userEvent`.
+- We need to tell our test that it is going to handle an `async` function by adding async right after the test name string, and before the callback function.
+- Basically this will tell the function that it's going to do an async operation.
+- Tell the function which async operation it needs to wait for.
+- Use the `await` keyword to tell the function we're awaiting for the async operation to finish.
+- Use the `waitFor` function from RTL to wait for RTL to update the DOM so we can query for the dog images.
+- Write an assertion in the `waitFor` functions callback function.
+- Finally, we will make sure that the correct function was called by adding an extra assertion, `expect(mockFetchData).toHaveBeenCalledTimes(1);`.
+
+
