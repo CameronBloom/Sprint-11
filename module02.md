@@ -72,5 +72,5 @@
 ### Objective 1 - Handle Authentication With Tokens in a React App
 - 
 
-### Objective 2 - 
+### Objective 2 - Implement Protected Routes Using an Authentication Token and Redirect
 -
