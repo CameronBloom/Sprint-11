@@ -50,24 +50,17 @@
 - *Naming convention for test files is `Component.test.js`*
 
 ## Module Examples
-- *Assert a component has rendered...*
-- ` test('renders without errors', () => {     `
-- `   render(<App />)                          `
-- ` })                                         `
-- *Assert a function has been called...*
-- ` test('function has been called', () => {   `
-- `   expect(someFunction).toHaveBeenCalled(); `
-- ` })                                         `
-- *Use a fake version object for testing...*
-- ` test('used fake data for testing', () => { `
-- `   jest.mock(object, () => () => "abcde");  `
-- ` })                                         `
-- *Rerender a component with new data...*
-- ` test('renders without errors', () => {     `
-- `   render(<App />)                          `
-- `   rerender(<App name={"Name"}/>)           `
-- ` })                                         `
-
+*create axios configuration for with `Authorization: <token>` header attached to requests*
+` import axios from 'axios';                       `
+`  export const axiosWithAuth =() => {             `
+`     const token = localStorage.getItem('token'); `
+`                                                  `
+`     return axios.create({                        `
+`         headers: {                               `
+`             Authorization: token,                `
+`         },                                       `
+`     });                                          `
+` };                                               `
 
 ### Objective 1 - Handle Authentication With Tokens in a React App
 - In general, servers don't remember anything about us after each interaction. 
