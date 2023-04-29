@@ -82,4 +82,7 @@
 - It's the application's responsibility to add an `Authorization: <token>` header to every request.
 
 ### Objective 2 - Implement Protected Routes Using an Authentication Token and Redirect
--
+- "Protected" routes should only render with authentication as we build our web apps.
+- With a token, we can add two layers of protection to our app. 
+- - One uses protected routes
+- - One sends an authentication header with our API calls (as we learned in the above objective).
