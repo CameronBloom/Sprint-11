@@ -35,7 +35,15 @@
 - PUT updates an existing resource.
 
 ### Objective 1 - Make PUT Requests to an External API Using Axios
-- 
+` axios                                                               `
+`   .put("http://somecoolurl.com/${couldHaveDynamicId}", updatedData) `
+`   .then(response => {                                               `
+`     response is the response we get back from the server            `
+`     Whatever resource was changed should be reflected in our client `
+`   })                                                                `
+`   .catch(err => {                                                   `
+`     if something goes wrong, we handle any errors here              `
+`   });                                                               `
 
 ### Objective 2 - Make DELETE Requests to an External API Using Axios
 - 
