@@ -46,4 +46,13 @@
 `   });                                                               `
 
 ### Objective 2 - Make DELETE Requests to an External API Using Axios
-- 
+` axios                                                               `
+`   .delete("http://somecoolurl.com/${someDynamicId}")                `
+`   .then(response => {                                               `
+`     response is the response we get back from the server            `
+`     usually on a positive response, we either re-set the state in   `
+`     react OR we navigate to the next page etc.                      `
+`   })                                                                `
+`   .catch(err => {                                                   `
+`     if something goes wrong, we handle any errors here              `
+`   });                                                               `
