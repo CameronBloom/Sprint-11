@@ -32,3 +32,9 @@
 - Web apps are made up of code, primarily JavaScript.
 - We need to host that project on a web server to serve up to people connected to the web.
 - A static site has hardcoded data that doesn't change.
+
+### Objective 3 - Demonstrate the Ability to Deploy and Maintain a React App Using Vercel
+- Getting started with Vercel takes just a few steps. 
+- After that, you can get up and running with a new project in less than a minute.
+- Sign up with GitHub and authorize Vercel with your GitHub account.
+
