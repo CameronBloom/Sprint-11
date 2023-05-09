@@ -15,3 +15,17 @@
 **Review: Client / Server**
 - Client => Front-End => Browser
 - Server => Back-End => Rest APIs
+
+### Objective 1 - Explain How the World Wide Web Works
+- The web is just one way to share data over the internet. 
+- The web consists of a body of information stored on web servers, ready to be shared worldwide.
+- The term "web server" can mean:
+- - 1. A computer that stores the code for a website.
+- - 2. A program that runs on such a computer.
+- Computers can:
+- - 1. Connect to the internet via the world wide web.
+- - 2. Locate a specific server computer through a URL and domain name.
+- - 3. Retrieve information or resources from that server.
+
+### Objective 2 - Explain What it Means to Deploy a Static Website
+
