@@ -28,4 +28,7 @@
 - - 3. Retrieve information or resources from that server.
 
 ### Objective 2 - Explain What it Means to Deploy a Static Website
-
+- Most data on the web is shared through websites and web applications.
+- Web apps are made up of code, primarily JavaScript.
+- We need to host that project on a web server to serve up to people connected to the web.
+- A static site has hardcoded data that doesn't change.
